@@ -1,10 +1,12 @@
 import { Column } from "../Column/Column";
 
+import { Container } from "../../shared.styled";
+
 export function Main({ tasks }) {
   const statuses = ['Без статуса', 'Нужно сделать', 'В работе', 'Тестирование', 'Готово']
     return (
         <main className="main">
-        <div className="container">
+        <Container>
           
           <div className="main__block">
             <div className="main__content">
@@ -14,7 +16,7 @@ export function Main({ tasks }) {
             </div>
           
           </div>
-        </div>
+        </Container>
       </main>
     )
 }
