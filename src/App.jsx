@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { GlobalStyle } from './GlobalStyle'
-import { Wrapper } from './App.styled'
+import { Wrapper, Loading } from './App.styled'
 import { Header } from './components/Header/Header'
 import { Main } from './components/Main/Main'
 import { tasks } from './data/data'
@@ -23,7 +23,7 @@ function App() {
       <Wrapper>
         <Header />
         {isLoading ? (
-          <div className="loading">Данные загружаются</div>
+          <Loading>Данные загружаются</Loading>
         ) : (
           <Main tasks={tasks} />
         )}
