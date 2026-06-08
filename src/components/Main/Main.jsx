@@ -1,22 +1,27 @@
 import { Column } from "../Column/Column";
 
 import { Container } from "../../shared.styled";
+import { 
+  MainWrapper,
+  MainBlock,
+  MainContent
+} from "./Main.styled";
 
 export function Main({ tasks }) {
   const statuses = ['Без статуса', 'Нужно сделать', 'В работе', 'Тестирование', 'Готово']
     return (
-        <main className="main">
+        <MainWrapper>
         <Container>
           
-          <div className="main__block">
-            <div className="main__content">
+          <MainBlock>
+            <MainContent>
                 {statuses.map((status) => (
                   <Column key={status} title={status} tasks={tasks} />
                 ))}
-            </div>
+            </MainContent>
           
-          </div>
+          </MainBlock>
         </Container>
-      </main>
+      </MainWrapper>
     )
 }

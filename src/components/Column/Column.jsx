@@ -1,18 +1,19 @@
 import { Card } from "../Card/Card";
+import { ColumnWrapper, ColumnTitle, CardsList } from "./Column.styled";
 
 export function Column({ title, tasks }) {
-    return (
-        <div className="main__column column">
-                <div className="column__title">
-                  <p>{title}</p>
-                </div>
-                <div className="cards">
-                  {tasks
-                  .filter((task) => task.status === title)
-                  .map((task) => (
-                    <Card key={task.id} task={task} />
-                  ))}
-                </div>
-              </div>
-    )
+  return (
+    <ColumnWrapper>
+      <ColumnTitle>
+        <p>{title}</p>
+      </ColumnTitle>
+      <CardsList>
+        {tasks
+          .filter((task) => task.status === title)
+          .map((task) => (
+            <Card key={task.id} task={task} />
+          ))}
+      </CardsList>
+    </ColumnWrapper>
+  );
 }
