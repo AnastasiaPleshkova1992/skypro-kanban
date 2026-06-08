@@ -5,6 +5,7 @@ export const tasks = [
     topicClass: '_orange',
     title: 'Название задачи',
     date: '30.10.23',
+    status: 'Без статуса'
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const tasks = [
     topicClass: '_green',
     title: 'Название задачи',
     date: '30.10.23',
+    status: 'Нужно сделать'
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const tasks = [
     topicClass: '_orange',
     title: 'Название задачи',
     date: '30.10.23',
+    status: 'В работе'
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const tasks = [
     topicClass: '_purple',
     title: 'Название задачи',
     date: '30.10.23',
+    status: 'Тестирование'
   },
   {
     id: 5,
@@ -33,5 +37,6 @@ export const tasks = [
     topicClass: '_orange',
     title: 'Название задачи',
     date: '30.10.23',
+    status: 'Готово'
   },
 ]

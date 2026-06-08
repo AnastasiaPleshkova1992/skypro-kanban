@@ -7,7 +7,9 @@ export function Column({ title, tasks }) {
                   <p>{title}</p>
                 </div>
                 <div className="cards">
-                  {tasks.map((task) => (
+                  {tasks
+                  .filter((task) => task.status === title)
+                  .map((task) => (
                     <Card key={task.id} task={task} />
                   ))}
                 </div>

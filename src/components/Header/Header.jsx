@@ -1,4 +1,7 @@
+import { useState } from "react"
+
 export function Header() {
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
   return (
     <header className="header">
         <div className="container">
@@ -11,8 +14,15 @@ export function Header() {
             </div>
             <nav className="header__nav">
               <button className="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
-              <a href="#user-set-target" className="header__user _hover02">Ivan Ivanov</a>
-              <div className="header__pop-user-set pop-user-set" id="user-set-target">
+              <a 
+                href="#" 
+                className="header__user _hover02"
+                onClick={(event) => {
+                  event.preventDefault()
+                  setIsUserMenuOpen(!isUserMenuOpen)
+                }}
+              >Ivan Ivanov</a>
+              <div className="header__pop-user-set pop-user-set" id="user-set-target" style={{ display: isUserMenuOpen ? 'block': 'none'}}>
                 <p className="pop-user-set__name">Ivan Ivanov</p>
                 <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
                 <div className="pop-user-set__theme">
