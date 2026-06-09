@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router"
 
 import { Container } from "../../shared.styled"
 import {
@@ -24,7 +25,9 @@ export function Header() {
               <a href="" target="_self"><img src="/images/logo_dark.png" alt="logo" /></a>
             </HeaderLogo>
             <HeaderNav>
-              <HeaderButton className="_hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></HeaderButton>
+              <HeaderButton className="_hover01" id="btnMainNew">
+                <Link to="/add-card">Создать новую задачу</Link>
+              </HeaderButton>
               <HeaderUser 
                 href="#" 
                 className="header__user _hover02"
@@ -40,7 +43,9 @@ export function Header() {
                   <p>Темная тема</p>
                   <input type="checkbox" className="checkbox" name="checkbox" />
                 </div>
-                <button type="button" className="_hover03"><a href="#popExit">Выйти</a></button>
+                <button type="button" className="_hover03">
+                  <Link to="/exit">Выйти</Link>
+                </button>
               </HeaderPopUserSet>
             </HeaderNav>					
           </HeaderBlock>

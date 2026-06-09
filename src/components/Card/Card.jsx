@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import { 
   CardItem, 
   CardWrapper,
@@ -16,18 +18,18 @@ export function Card({ task }) {
           <CardTheme className={task.topicClass}>
             <p className={task.topicClass}>{task.topic}</p>
           </CardTheme>
-          <a href="#popBrowse" target="_self">
+          <Link to={`/card/${task.id}`}>
             <CardButton>
               <div></div>
               <div></div>
               <div></div>
             </CardButton>
-          </a>
+          </Link>
         </CardGroup>
         <CardContent>
-          <a href="" target="_blank">
+          <Link to={`/card/${task.id}`}>
             <CardTitle>{task.title}</CardTitle>
-          </a>
+          </Link>
           <CardDate>
             <svg
               xmlns="http://www.w3.org/2000/svg"
